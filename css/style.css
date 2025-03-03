@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+:root {
+    --primary: #3c5abe; 
+    --secondary: #6093f9; 
+    --heading: "Alfa Slab One", serif;
+    --text: "Open Sans", sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--text);
+    background-color: #e9f5ff; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 1rem;
+}
+
+/* Widget Container */
+.widget {
+    width: 100%;
+    max-width: 20rem;
+    background-color: #fff; 
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+/* Masthead */
+.masthead {
+    text-align: center;
+    padding: 1rem;
+    background-color: var(--primary);
+    color: #fff; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.masthead img {
+    width: 30%;
+    height: auto;
+    margin: auto;
+    object-fit: fill;
+}
+
+.masthead h1 {
+    font-family: var(--heading);
+    font-size: 1.5rem;
+}
+
+.masthead p {
+    font-size: 0.9rem;
+}
+
+/* Main Content */
+.main-content {
+    padding: 1rem;
+    background-color: var(--primary);
+}
+
+.main-content input[type="text"] {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 0.5rem;
+    border: 1px solid #007bff; 
+    border-radius: 4px;
+}
+
+.main-content button {
+    width: 100%;
+    padding: 0.5rem;
+    background-color: var(--secondary);
+    color: #fff; 
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.main-content button:hover {
+    background-color: #b3d7ff; 
+}
+
+.main-content ul {
+    list-style: none;
+    margin-top: 1rem;
+}
+
+.main-content ul li {
+    width: 100%;
+    padding: 0.5rem;
+    background-color: #f0f8ff; 
+    border: 1px solid #b3d7ff; 
+}
+
+.main-content ul li::before {
+    content: "\f105"; 
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    margin-right: 0.5rem; 
+    color: var(--primary); 
+}
+
+.main-content .feedback {
+    color: #ff4d4d; 
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+}
+
+/* Footer */
+.footer {
+    padding: 1rem;
+    background-color: var(--secondary);
+    text-align: center;
+}
+
+.footer .social-link {
+    color: #fff; 
+    font-size: 0.9rem;
+    margin: 0 0.5rem;
+    text-decoration: none;
+}
+
+.footer .social-link:hover {
+    text-decoration: underline;
+}
+
+/* Media Queries for Larger Screens */
+@media only screen and (min-width: 768px) {
+    .widget {
+        max-width: 45rem;
+    }
+
+    .masthead {
+        gap: 2rem;
+    }
+
+    .masthead img {
+        width: 20%;
+    }
+
+    .masthead h1 {
+        font-size: 2rem;
+    }
+
+    .masthead p {
+        font-size: 1rem;
+    }
+
+    .footer .social-link {
+        font-size: 1rem;
+    }
+}
